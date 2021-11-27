@@ -7,9 +7,6 @@ import Error from "../src/components/incognito/Error";
 import Not_found from "./components/incognito/Not_found";
 function App() {
   return (
-    <div className="App">
-
-
 <Router>
 
 <Routes>
@@ -34,8 +31,6 @@ function App() {
 </Router>
 
 
-      
-    </div>
   );
 }
 
