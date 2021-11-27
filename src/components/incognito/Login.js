@@ -88,8 +88,9 @@ function Login() {
     e.preventDefault();
     Firebase.auth()
       .signInWithEmailAndPassword(email, password)
+      
       .then(() => {
-        
+        window.location.href = "/"
       })
       .catch((error) => {
         alert(error.message);
