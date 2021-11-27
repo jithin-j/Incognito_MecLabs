@@ -137,6 +137,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { firebseContext } from "../../store/firebasecontext";
+import "../stylesheet/signup.css";
 
 
 export default function Signup() {
@@ -171,7 +172,10 @@ export default function Signup() {
   };
   return (
     <div>
-      <div className="signup">
+      <div style={{
+        display:'flex'
+        
+      }} id="signup" className="signup">
         
         <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
