@@ -19,7 +19,7 @@ function Navigation() {
               }}
             >
               Logout
-              chat app;
+              
             </span>
           )}
         </div>

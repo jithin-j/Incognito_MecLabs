@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import Chat from './chat'
 
 import Navbar from './Navbar'
 import Navigation from './navigation'
@@ -9,6 +10,7 @@ const Home = () => {
         <div>
         <Navigation />
            <Navbar /> 
+           <Chat />
         </div>
     )
 }
