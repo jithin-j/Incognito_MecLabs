@@ -1,0 +1,29 @@
+.cheading {
+  color: antiquewhite;
+}
+.channels {
+  right: 0;
+  height: 100vh; /* Full-height: remove this if you want "auto" height */
+  width: 15rem; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  background-color: #00062a;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  margin: auto;
+  text-align: center;
+}
+.channels a {
+  padding: 6px 8px 10px 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  text-align: center;
+}
+
+.main {
+  color: #00062a;
+  display: flex;
+}
