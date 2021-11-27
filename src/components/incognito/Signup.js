@@ -161,8 +161,11 @@ export default function Signup() {
               username: username,
               phone: phone,
             })
-            .then(() => {
-              nav('/'); // redirects to login
+            
+        .then(() => {
+            // window.location.href = "/";
+            console.log('then');
+           window.location.href = "/"
             }).catch((error)=>{
               alert(error.message)
             })
