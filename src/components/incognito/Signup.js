@@ -137,6 +137,8 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { firebseContext } from "../../store/firebasecontext";
+import "../stylesheet/signup.css";
+import signup_icon from "../images/signup_icon.png";
 
 
 export default function Signup() {
@@ -173,13 +175,18 @@ export default function Signup() {
       });
   };
   return (
-    <div>
+   
       <div className="signup">
-        
+        <div className="signup-img">
+        <img src={signup_icon} alt="new" />
+        </div>
+    <div className="signup-main">
+
         <form onSubmit={handleSubmit}>
-          <label htmlFor="fname">Username</label>
+          <div className="input_elements">
           
           <input
+          placeholder="username"
             className="input"
             type="text"
             id="fname"
@@ -187,23 +194,24 @@ export default function Signup() {
             onChange={(e) => setUsername(e.target.value)}
             name="name"
             defaultValue=""
-          />
+          /> </div>
           
-          <label htmlFor="fname">Email</label>
+          <div className="input_elements">
          
-          <input
-            className="input"
-            type="email"
-            id="fname"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            name="email"
-            defaultValue=""
-          />
+         <input
+         placeholder="Email"
+           className="input"
+           type="email"
+           id="fname"
+           value={email}
+           onChange={(e) => setEmail(e.target.value)}
+           name="email"
+           defaultValue=""
+         /> </div>
+          <div className="input_elements">
           
-          <label htmlFor="lname">Phone</label>
-          
           <input
+          placeholder="phone"
             className="input"
             type="number"
             id="lname"
@@ -211,11 +219,11 @@ export default function Signup() {
             onChange={(e) => setPhone(e.target.value)}
             name="phone"
             defaultValue=""
-          />
-          
-          <label htmlFor="lname">Password</label>
+          /> </div>
+          <div className="input_elements">
           
           <input
+          placeholder="password"
             className="input"
             type="password"
             value={password}
@@ -223,15 +231,20 @@ export default function Signup() {
             id="lname"
             name="password"
             defaultValue=""
-          />
+          /></div>
+          
+          
+          
+          
          
           
-          <button onClick={handleSubmit}>Signup</button>
+          
         </form>
-        <Link to="/login"> <button >Login</button>  </Link>
-        
+        <button className="btn" onClick={handleSubmit}>Signup</button>
+        <Link to="/login"> <button className="btn" >Login</button>  </Link>
+        </div>
       </div>
-    </div>
+   
   );
 }
 

@@ -25,8 +25,7 @@ const data = [{
 }]
 
   return (
-    <div>
-     
+    <div>     
      <div className="box">
        {data.map((datas)=>{
          return(
