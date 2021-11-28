@@ -3,6 +3,8 @@ import Chat from './chat'
 
 import Navbar from './Navbar'
 import Navigation from './navigation'
+import Channels from './Channels'
+import '../stylesheet/mainstyle.css'
 const Home = () => {
 
     
@@ -11,6 +13,7 @@ const Home = () => {
         <Navigation />
            <Navbar /> 
            <Chat />
+           <Channels />
         </div>
     )
 }
