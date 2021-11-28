@@ -1,38 +1,40 @@
 import React from 'react'
-import "../stylesheet/mainstyle.css"
-import htmlimg from "../images/Group_11.png"
-import img2 from "../images/Group_12.png"
-import img3 from "../images/Group_13.png"
-import img4 from "../images/Group_14.png"
-import img5 from "../images/Group_15.png"
-import img6 from "../images/Group_16.png"
-import img7 from "../images/Group_17.png"
+import Flutter from '../images/Flutter.png'
+import html from '../images/html.png'
+import java from '../images/java.png'
+import js from '../images/js.png'
+import '../stylesheet/Navbar.css'
+
 const Navbar = () => {
+const data = [{
+  name: 'HTML',
+  img:html ,
+},
+{
+  name: 'JS',
+  img:js ,
+}
+,
+{
+  name: 'Java',
+  img:java ,
+},
+{
+  name: 'Flutter',
+  img:Flutter ,
+}]
+
   return (
-    <div>
-      <div className="sidenav">
-        <a href="#">
-          <img src={htmlimg}/>
-        </a>
-        <a href="#">
-          <img src={img2}/>
-        </a>
-        <a href="#">
-          <img src={img3}/>
-        </a>
-        <a href="#">
-          <img src={img4}/>
-        </a>
-        <a href="#">
-          <img src={img5}/>
-        </a>
-        <a href="#">
-          <img src={img6}/>
-        </a>
-        <a href="#">
-          <img src={img7}/>
-        </a>
-      </div>
+    <div>     
+     <div className="box">
+       {data.map((datas)=>{
+         return(
+         <div className="box__1">
+           <img src={datas.img} alt="" />
+         </div>
+         )
+       })}
+     </div>
     </div>
   )
 }
