@@ -6,17 +6,21 @@ import Navbar from './Navbar'
 import Navigation from './navigation'
 import Channels from './Channels'
 import '../stylesheet/mainstyle.css'
+import { nameContext } from '../../store/name'
+import Blog from './Blog'
 const Home = () => {
 
-    
+    const {name} = useContext(nameContext)
+
     return (
         <div>
 
         <Navigation />
 
-            <div className="main"></div>
+            
 
            <Navbar /> 
+           
            <Chat />
            <Channels />
         </div>

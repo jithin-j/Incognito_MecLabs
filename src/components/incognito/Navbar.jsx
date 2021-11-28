@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Flutter from '../images/Flutter.png'
 import html from '../images/html.png'
 import java from '../images/java.png'
@@ -8,8 +8,14 @@ import python from '../images/python.png'
 import selenium from '../images/selenium.png'
 
 import '../stylesheet/Navbar.css'
+import { nameContext } from '../../store/name'
 
 const Navbar = () => {
+  const [name,setName] = useContext(nameContext)
+  const handleClick = e =>{
+    e.preventDefault()
+    
+  }
 const data = [
 {
   name: 'html',
@@ -48,7 +54,7 @@ const data = [
        {data.map((datas)=>{
          return(
          <div className="box__1">
-           <img className = 'navbar-img' src={datas.img} alt="" />
+           <img onClick={handleClick} className = 'navbar-img' src={datas.img} alt="" />
          </div>
          )
        })}

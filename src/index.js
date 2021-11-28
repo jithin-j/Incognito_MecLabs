@@ -6,13 +6,16 @@ import Firebase from '../src/firebase/config'
 
 import reportWebVitals from './reportWebVitals';
 import Context, { firebseContext } from './store/firebasecontext';
+import { nameContext } from './store/name';
 
 ReactDOM.render(
   <React.StrictMode>
   <firebseContext.Provider value={{Firebase}}>
+  <nameContext>
   <Context>
     <App />
     </Context>
+    </nameContext>
     </firebseContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
